@@ -2,9 +2,9 @@
 package surf
 
 import (
-	"github.com/headzoo/surf/agent"
-	"github.com/headzoo/surf/browser"
 	"github.com/headzoo/surf/jar"
+	"github.com/tommyalatalo/surf/agent"
+	"github.com/tommyalatalo/surf/browser"
 )
 
 var (
@@ -32,7 +32,6 @@ func NewBrowser() *browser.Browser {
 	bow.SetCookieJar(jar.NewMemoryCookies())
 	bow.SetBookmarksJar(jar.NewMemoryBookmarks())
 	hist := jar.NewMemoryHistory()
-	hist.SetMax(DefaultMaxHistoryLength)
 	bow.SetHistoryJar(hist)
 	bow.SetHeadersJar(jar.NewMemoryHeaders())
 	bow.SetAttributes(browser.AttributeMap{
